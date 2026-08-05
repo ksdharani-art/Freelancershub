@@ -1,0 +1,265 @@
+/* ---- Global Styles & Variables ---- */
+:root {
+  --fh-navy: #10192E;
+  --fh-navy-light: #1C253B;
+  --fh-gold: #D9A441;
+  --fh-gold-dark: #C6923A;
+  --fh-teal: #1F7A5C;
+  --fh-teal-light: #EAF3EE;
+  --fh-slate: #6B7280;
+  --fh-slate-light: #9AA3B5;
+  --fh-offwhite: #F5F6F4;
+  --fh-white: #FFFFFF;
+  --fh-error: #B3441C;
+  --fh-error-light: #FBEEE8;
+  --fh-border: #E4E2DC;
+  --fh-shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --fh-shadow-md: 0 4px 6px -1px rgba(16, 25, 46, 0.08), 0 2px 4px -1px rgba(16, 25, 46, 0.03);
+  --fh-shadow-lg: 0 10px 25px -5px rgba(16, 25, 46, 0.12), 0 8px 10px -6px rgba(16, 25, 46, 0.06);
+
+  --font-serif: 'Fraunces', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--fh-offwhite);
+  color: var(--fh-navy);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+#root {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  text-align: left !important;
+  border-inline: none !important;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Premium UI Components ---- */
+
+.fh-title-serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  color: var(--fh-navy);
+}
+
+.fh-subtitle-sans {
+  font-family: var(--font-sans);
+  color: var(--fh-slate);
+  font-size: 14px;
+}
+
+/* Premium Card */
+.fh-card {
+  background-color: var(--fh-white);
+  border: 1px solid var(--fh-border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--fh-shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.fh-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--fh-shadow-lg);
+  border-color: rgba(217, 164, 65, 0.3);
+}
+
+/* Dark Accent Card */
+.fh-card-dark {
+  background-color: var(--fh-navy-light);
+  color: var(--fh-white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--fh-shadow-lg);
+}
+
+/* Forms & Inputs */
+.fh-form-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--fh-navy);
+  margin-bottom: 6px;
+}
+
+.fh-input-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px;
+  border-radius: 10px;
+  background-color: var(--fh-white);
+  border: 1px solid var(--fh-border);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.fh-input-group:focus-within {
+  border-color: var(--fh-navy);
+  box-shadow: 0 0 0 3px rgba(16, 25, 46, 0.08);
+}
+
+.fh-input-group input,
+.fh-input-group select,
+.fh-input-group textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--fh-navy);
+}
+
+.fh-input-classic {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--fh-border);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.fh-input-classic:focus {
+  border-color: var(--fh-navy);
+  box-shadow: 0 0 0 3px rgba(16, 25, 46, 0.08);
+}
+
+/* Premium Buttons */
+.fh-btn-gold {
+  background-color: var(--fh-gold);
+  color: var(--fh-navy);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fh-btn-gold:hover {
+  background-color: var(--fh-gold-dark);
+}
+
+.fh-btn-gold:active {
+  transform: translateY(1px);
+}
+
+.fh-btn-navy {
+  background-color: var(--fh-navy);
+  color: var(--fh-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: opacity 0.15s ease, transform 0.1s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fh-btn-navy:hover {
+  opacity: 0.9;
+}
+
+.fh-btn-navy:active {
+  transform: translateY(1px);
+}
+
+.fh-btn-outline {
+  background-color: transparent;
+  border: 1.5px solid var(--fh-navy);
+  color: var(--fh-navy);
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.15s, color 0.15s;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fh-btn-outline:hover {
+  background-color: var(--fh-navy);
+  color: var(--fh-white);
+}
+
+/* Badges */
+.fh-badge-status {
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.fh-badge-open {
+  background-color: rgba(217, 164, 65, 0.15);
+  color: var(--fh-gold-dark);
+}
+
+.fh-badge-progress {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: #4F46E5;
+}
+
+.fh-badge-review {
+  background-color: rgba(16, 25, 46, 0.1);
+  color: var(--fh-navy);
+}
+
+.fh-badge-completed {
+  background-color: var(--fh-teal-light);
+  color: var(--fh-teal);
+}
+
+/* Page Headers */
+.fh-page-header {
+  padding: 40px 0 20px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--fh-border);
+}
+
+/* Custom Micro-animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.fh-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive Navigation adjustments */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #10192E;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    border-bottom: 1px solid #1E293B;
+    z-index: 99;
+  }
+  .navbar-toggler {
+    display: block !important;
+  }
+}
